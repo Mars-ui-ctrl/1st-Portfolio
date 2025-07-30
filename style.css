@@ -1,0 +1,428 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: open sans, sans-serif; */
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #252324;
+    /* glossy black */
+
+    color: white;
+    padding: 20px 40px;
+    /* text-align : center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px #ff2fd6(187, 255, 0, 0.5);
+    transition: background-color 0.3s ease;
+    text-shadow: #ff2fd6 0px 0px 10px;
+
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+#hero {
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.5);
+
+}
+
+.hero-content {
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    /* dark transparent */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    width: 60%;
+    text-align: center;
+    line-height: 1.5;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: cyan;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+
+
+}
+
+button:hover {
+    background-color: #ff2fd6;
+}
+
+
+button {
+    animation-fill-mode: both;
+}
+
+#about {
+    padding: 80px 40px;
+    background: linear-gradient(rgba(30, 30, 30, 0.92), rgba(30, 30, 30, 0.92)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out forwards;
+    box-shadow: inset 0 0 10px rgba(0, 255, 94, 0.5);
+    /* min-height: 100vh; */
+
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 128, 17, 0.5);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out forwards;
+    border: 2px solid transparent;
+    /* border-image: linear-gradient(to right, #00c6ff, #ff2fd6); */
+    /* border-image-slice: 1; */
+}
+
+#about p {
+    text-shadow: inset 0 0 10px rgb(0, 183, 255);
+}
+
+#about h2 {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+#projects {
+    padding: 80px 40px;
+    background: linear-gradient(rgba(30, 30, 30, 0.92), rgba(30, 30, 30, 0.92)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+    /* filter: blur(px); */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+    color: white;
+    margin: auto;
+    width: 100%;
+    box-shadow: inset 0 0 10px rgba(16, 138, 245, 0.5);
+
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 10px rgba(16, 138, 245, 0.5);
+    border-radius: 12px;
+    padding: 35px;
+    /* margin-bottom: 20px; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out forwards;
+    transform: scale(1.05);
+    line-height: 5;
+    max-width: 600px;
+    margin: 20px auto;
+
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(16, 138, 245, 0.5);
+}
+
+.project-card>h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.projects-content a {
+    text-decoration: none;
+    color: #00c6ff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+}
+
+.project-card a:hover {
+    color: #00ea3e;
+    text-shadow: 0 0 8px #00831c, 0 0 2px #fff;
+
+}
+
+#skills {
+    background: linear-gradient(rgba(30, 30, 30, 0.92), rgba(30, 30, 30, 0.92)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+    padding: 80px 40px;
+    text-align: center;
+    /* border-radius: 8px; */
+    box-shadow: 0 8px 20px rgba(0, 128, 17, 0.5);
+    animation: fadeIn 1s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: auto;
+    width: 100%;
+}
+
+.skills-content ul li {
+    /* padding: 10px; */
+    /* margin: 10px 0; */
+    /* gap: 20px; */
+    /* list-style: none; */
+    /* text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 128, 17, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin: 10px 0; */
+
+
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 128, 17, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+#skills h2 {
+    text-shadow: 0 0 10px rgba(0, 255, 94, 0.3);
+}
+
+
+.skills-content ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 128, 17, 0.7);
+}
+
+.skills-content ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin-top: 40%;
+
+}
+
+#contact {
+    padding: 80px 40px;
+    background: linear-gradient(rgba(30, 30, 30, 0.92), rgba(30, 30, 30, 0.92)), url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+    box-shadow: 0 8px 20px rgba(0, 128, 255, 0.3);
+    min-height: 60vh;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 32px 0 rgba(255, 255, 255, 0.25), 0 1.5px 8px 0 rgba(255, 255, 255, 0.12);
+
+}
+
+.contact-content h2 {
+    text-shadow: 0 0 10px rgb(13, 0, 255);
+}
+
+.contact-content p {
+    text-shadow: 0 0 10px rgb(51, 0, 255);
+}
+
+.contact-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+    color: cyan;
+
+
+}
+
+.contact-content a:hover {
+    color: red;
+    box-shadow: 0 0 8px #ff1f1f, 0 0 2px #880000;
+}
+
+footer {
+    background-color: #252324;
+    color: rgb(255, 4, 0);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(255, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+footer:hover p {
+    color: #00c6ff;
+}
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 10px;
+    }
+    nav {
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+    }
+    nav a {
+        padding: 8px 0;
+        font-size: 1rem;
+    }
+    #hero {
+        padding: 30px 0;
+        min-height: 60vh;
+    }
+    .hero-content {
+        padding: 20px 10px;
+    }
+    #hero h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    #hero p {
+        width: 95%;
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    section, #about, #projects, #skills, #contact {
+        padding: 30px 5px;
+    }
+    .about-content, .projects-content, .skills-content, .contact-content {
+        padding: 18px 6px;
+    }
+    .project-card {
+        padding: 18px 8px;
+        max-width: 98vw;
+        font-size: 1rem;
+    }
+    .skills-content ul {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 3px;
+    }
+    .skills-content ul li {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    #skills h2, #about h2, #projects h2, #contact h2 {
+        font-size: 1.3rem;
+    }
+    .contact-content ul {
+        gap: 6px;
+        font-size: 0.95rem;
+    }
+    footer {
+        padding: 10px 0;
+        font-size: 0.95rem;
+    }
+}
+    
